@@ -1,0 +1,10 @@
+Step-1: Getting the data
+wget https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-PY0221EN-SkillsNetwork/labs/module%206/Lab%20-%20Extract%20Transform%20Load/data/source.zip
+
+Step-2: Unzip the folder
+unzip source.zip
+
+Step-3:
+Importing libraries and paths
+
+python3.11 -m pip install pandas
