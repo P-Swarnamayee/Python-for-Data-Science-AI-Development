@@ -1,0 +1,35 @@
+TASK: Write unit tests for the given function
+Here is a function that accepts two arguments and returns their sum.
+-----------------------------------------------------------------
+Copy and paste the below code into mymodule.py and the save the file.
+
+def add(a,b):
+    """
+    This function returns the sum of the given numbers
+    """
+    return a + b
+
+Write test cases for these scenarios.
+1) When 2 and 4 are given as input the output must be 6.
+2) When 0 and 0 are given as input the output must be 0.
+3) When 2.3 and 3.6 are given as input the output must be 5.9.
+4) When the strings ‘hello’ and ‘world’ are given as input the output must be ‘helloworld’.
+5) When 2.3000 and 4.300 are given as input the output must be 6.6.
+6) When -2 and -2 are given as input the output must not be 0. (Hint : Use assertNotEqual)
+
+SOLUTION:
+=========
+import unittest
+
+from mymodule import add
+
+class TestAdd(unittest.TestCase): 
+    def test_add(self): 
+        self.assertEqual(add(2,4),6 ) 
+        self.assertEqual(add(0,0), 0)  
+        self.assertEqual(add(2.3,3.6), 5.9)  
+        self.assertEqual(add("hello",'world'), "helloworld")  
+        self.assertEqual(add(2.3000,4.3000), 6.6)  
+        self.assertNotEqual(add(-2,-2), 0)  
+        
+unittest.main()
