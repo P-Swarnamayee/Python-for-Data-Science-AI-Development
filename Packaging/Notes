@@ -1,0 +1,9 @@
+To create a package:
+
+Create a folder with the package name
+Create an empty __init__.py file
+
+Create the required modules
+
+In the __init__.py file, add code to reference the modules needed in the package
+You can verify the package via the bash terminal in a Python shell.
