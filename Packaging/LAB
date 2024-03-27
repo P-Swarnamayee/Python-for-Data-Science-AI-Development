@@ -1,0 +1,71 @@
+LAB:
+=============
+Create a module named basic
+Add two functions to the module basic
+Create a module named stats
+Add two functions to the module stats
+Create a python package named mymath
+Verify that the package is working
+====================================
+
+New Folder: mymath --- new files: basic.py, stats.py, __init__.py
+
+basic.py
+=========
+def square(number):
+    """
+    This function returns the square of a given number
+    """
+    return number ** 2
+
+def double(number):
+    """
+    This function returns twice the value of a given number
+    """
+    return number * 2
+
+def add(a, b):
+    """
+    This function returns the sum of given numbers
+    """
+    return a + b
+
+stats.py
+=========
+def mean(numbers):
+    """
+    This function returns the mean of the given list of numbers
+    """
+    return sum(numbers)/len(numbers)
+
+def median(numbers):
+    """
+    This function returns median of the given list of numbers
+    """
+    numbers.sort()
+   
+    if len(numbers) % 2 == 0:
+       median1 = numbers[len(numbers) // 2]
+       median2 = numbers[len(numbers) // 2 - 1]
+       mymedian = (median1 + median2) / 2
+    else:
+       mymedian = numbers[len(numbers) // 2]
+    return mymedian
+
+__init__.py
+=======================
+from . import basic
+from . import stats
+
+
+Now open terminal:
+===================
+theia@theiadocker-spolaki1:/home/project$ python3
+
+>>> import mymath
+>>> mymath.basic.add(3,4)
+7
+>>> mymath.stats.mean([3,4,6])
+4.333333333333333
+>>> exit()
+
