@@ -1,0 +1,29 @@
+Create a new module named geometry and add to the mymath package.
+Create a module name geometry
+Add a function named area_of_rectangle that takes length and breadth as input and returns the area of a rectangle.
+Add a function named area_of_circle that takes radius as input and returns the area of a circle.
+Modify the __init__.py to include this module.
+Import and test the function area_of_circle from python terminal.
+
+SOLUTION:
+==========
+geometry.py
+===========
+def area_of_rectangle(len,bred):
+    return len*bred
+
+def area_of_circle(radius):
+    return 3.14*(radius*radius)
+
+__init__.py:
+=============
+from . import basic
+from . import stats
+from . import geometry
+
+Terminal:
+==========
+theia@theiadocker-spolaki1:/home/project$ python3
+>>> import mymath
+>>> mymath.geometry.area_of_circle(4)
+50.24
